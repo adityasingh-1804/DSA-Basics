@@ -1,33 +1,20 @@
 #include<iostream>
 using namespace std;
-void selection_sort(int arr[],int n){
-    for(int i=0;i<n-1;i++){
-        int mini=i;
-        for(int j = i;j<n;j++){
-            if(arr[j]<arr[mini]){
-                mini=j;
-
-            }
-        }
-         int temp=arr[mini];
-            arr[mini]=arr[i];
-            arr[i]=temp;
-
-    }
- 
-}
 int main(){
-int n;
-cout<<"enter the no of elements";
-cin>>n;
-int arr[n];
-for(int i=0;i<n;i++){
-    cin>> arr[i];}
-    selection_sort(arr,n);
-    for(int i=0;i<n;i++){
-        cout<< arr[i]<<" ";
+    int arr[6]={15,5,8,2,10,15};
+    int largest = arr[0];
+    int slargest= -1;
+    for(int i = 1; i<6; i++){
+        if(arr[i]> largest){
+            slargest = largest;
+            largest = arr[i];
+
+        }
+    else if(arr[i]< largest && arr[i] > slargest ){
+        slargest = arr[i];
     }
     
-return 0;
-
+    }
+cout<<"second largest is= "<< slargest<< endl;
+cout<<" largest is= "<<largest;
 }
