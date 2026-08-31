@@ -1,32 +1,38 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n ;
-    cout<<"enter the value ";
+    int n;
+    cout<<"enter the number of elements:";
     cin>> n;
     int arr[n];
-    for(int i=0;i<n;i++){
-        cout<<"Enter the values in array";
-       cin >>  arr[i];
+    for(int i = 0;i<n;i++){
+        cin>> arr[i];
     }
-    int hash[13]={0};
-    for(int i=0;i<n;i++){
+    int hash[12]={0};
+    for(int i =0;i<n;i++){
         hash[arr[i]]=hash[arr[i]]+1;
+
     }
     int q;
-    cout<<"enter the number queries";
+    cout<<"Enters the number of queries:";
     cin>> q;
+   
     while(q--){
-        int numbers;
-        cout<<"enter the number";
-        cin>> numbers;
-        
-        cout<< hash[numbers]<<" times this number is" << endl;
+         int number;
+      
+        cout<<"Enter the number:";
+        cin>> number;
+        cout<<hash[number]<< endl;
     }
+    
+
+  
+
+}
 
 
       
 
 
 
-}
+
