@@ -11,6 +11,9 @@ int main(){
             cout<< i;
 
         }
+        else{
+            cout<<"number do not exist";
+        }
     }
 
 }
