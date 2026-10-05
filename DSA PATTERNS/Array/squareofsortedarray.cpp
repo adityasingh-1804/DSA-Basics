@@ -1,0 +1,68 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        int siz=nums.size();
+        vector<int> pos;
+        vector<int> neg;
+        for(int i = 0; i < siz; i++){
+        if(pos.size()<0){
+            neg.push_back(nums[i]);
+        }
+        else{
+            pos.push_back(nums[i]);
+        }
+    }
+
+    if(neg.size()==0){
+        for(int i = 0; i < pos.size(); i++){
+            pos[i]=pos[i]*pos[i];
+            return pos;
+        }
+    if(pos.size()==0){
+        for(int i = 0; i < neg.size(); i++){
+            neg[i]=neg[i]*neg[i];
+            reverse(neg.begin(),neg.end());
+            return neg;
+        }
+    }    
+    }
+    int i = 0; 
+    int j = 0;
+    int id = 0;
+    int n = neg.size();
+    int m = pos.size();
+    vector<int> res(n+m);
+    while(i<n,j<m){
+        if(res[i]<=pos[j]){
+            res[id]=neg[i];
+            id++;
+            i++;
+        }
+        else{
+            res[id]=pos[j];
+            id++;
+            j++;
+        }
+        while(i<n){
+            res[id]=neg[i];
+            id++;
+            i++;
+
+        }
+        while(i>m){
+            res[id]=pos[j];
+            id++;
+            j++;
+
+
+    }
+return res;
+
+    }
+       
+    }
+};
