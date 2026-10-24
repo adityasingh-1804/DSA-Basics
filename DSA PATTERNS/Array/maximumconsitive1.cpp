@@ -14,7 +14,6 @@ int main(){
     else{
         cnt=0;
     }
-    
    }
    cout<< maxi;
 

@@ -24,7 +24,6 @@ int main(){
             res =max(len,res);
         }
 
-
     }
     cout<< res;
 
