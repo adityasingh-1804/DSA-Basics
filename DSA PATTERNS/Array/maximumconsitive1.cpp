@@ -9,7 +9,6 @@ int main(){
     if(arr[i]==1){
         cnt++;
         maxi=max(maxi,cnt);
-
     }
     else{
         cnt=0;
