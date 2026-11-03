@@ -9,10 +9,9 @@ int main(){
     for(int i = 0; i < n; i++){
         if(arr[i]==num){
             cout<< i;
-
         }
         else{
-            cout<<"number do not exist";
+            out<<"number do not exist";
         }
     }
 
